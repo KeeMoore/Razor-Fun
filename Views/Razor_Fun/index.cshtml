@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title><Razor-Fun></Razor-Fun>!</title>
+        
+    </head>
+    <body>
+        <h1>Here are some delicious foods!</h1>
+        
+        @{
+    var stringArray = new string[] { "Apple Pie", "Pizza", "Cinnamon Rolls", "Lasagna", "Donuts", "Chocolate Cake", "Burritos" };
+
+    foreach (var c in stringArray)// Apply conditional logic to affect how data renders.If the string in the array begins with the letter c, style the <p> element with red text!
+    {
+        if (c.StartsWith("C"))
+        {
+            <p style="color:red;">@c</p>
+        }
+        else
+        {
+            <p>@c</p>
+        }
+    }
+}
+
+    </body>
+</html>
+
